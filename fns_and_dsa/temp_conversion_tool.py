@@ -17,8 +17,9 @@ except ValueError:
 unit = input("Is this temperature in Celsius or Fahrenheit? (C/F):")
 match unit.upper():
     case 'C':
-        print(convert_to_fahrenheit(value))
+        print(f"{value}°C is {convert_to_fahrenheit(value)}°F")
     case 'F':
-        print(convert_to_celsius(value))
+        print(f"{value}°F is {convert_to_celsius(value)}°C")
     case _:
         print("Invalid unit. Please enter 'C' or 'F'.")
+
