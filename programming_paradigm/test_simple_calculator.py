@@ -7,20 +7,16 @@ class Test_Calculator(unittest.TestCase):
         self.calc = SimpleCalculator()
 
     def test_addition(self):
-        result = self.calc.add(5, 3)
-        self.assertEqual(result, 8)
+        self.assertEqual(self.calc.add(5, 3), 8)
 
     def test_subtraction(self):
-        result = self.calc.subtract(9,2)
-        self.assertEqual(result, 7)
+        self.assertEqual(self.calc.subtract(9,2), 7)
 
     def test_multiply(self):
-        result = self.calc.multiply(4, 3)
-        self.assertEqual(result, 12)
+        self.assertEqual(self.calc.multiply(4, 3), 12)
 
     def test_divide(self):
-        result = self.calc.divide(10, 2)
-        self.assertEqual(result, 5.0)
+        self.assertEqual(self.calc.divide(10, 2), 5.0)
 
     def test_divide_by_zero(self):
         with self.assertRaises(ZeroDivisionError):
